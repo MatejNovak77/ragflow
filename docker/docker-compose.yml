@@ -43,6 +43,7 @@ services:
       - ../history_data_agent:/ragflow/history_data_agent
       - ./service_conf.yaml.template:/ragflow/conf/service_conf.yaml.template
       - ./entrypoint.sh:/ragflow/entrypoint.sh
+      - ../web:/ragflow/web
     env_file: .env
     environment:
       - TZ=${TIMEZONE}
