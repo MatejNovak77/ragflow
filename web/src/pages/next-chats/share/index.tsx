@@ -10,7 +10,7 @@ import { useFetchExternalChatInfo } from '@/hooks/use-chat-request';
 import i18n from '@/locales/config';
 import { useSendButtonDisabled } from '@/pages/chat/hooks';
 import { buildMessageUuidWithRole } from '@/utils/chat';
-import React, { forwardRef, useMemo } from 'react';
+import React, { forwardRef, useMemo, useEffect } from 'react';
 import {
   useGetSharedChatSearchParams,
   useSendSharedMessage,
@@ -52,6 +52,10 @@ const ChatContainer = () => {
       i18n.changeLanguage(locale);
     }
   }, [locale, visibleAvatar]);
+  
+  useEffect(() => {
+    document.title = 'BYZKIDS asistent';
+  }, []);
   const { data: avatarData } = useFetchAvatar();
 
   if (!conversationId) {
