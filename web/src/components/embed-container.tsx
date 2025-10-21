@@ -27,7 +27,7 @@ export function EmbedContainer({
         <div className="flex justify-between items-center border-b p-3">
           <div className="flex gap-2 items-center">
             <RAGFlowAvatar avatar={avatar} name={title} isPerson />
-            <div className="text-xl text-foreground">BYZKIDS asistent</div>
+            <div className="text-xl text-foreground">{title}</div>
           </div>
           <Button
             variant={'secondary'}
