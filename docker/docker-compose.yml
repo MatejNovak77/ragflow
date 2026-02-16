@@ -156,6 +156,8 @@ services:
     container_name: mcp-company-a
     ports:
       - "127.0.0.1:9382:9382"
+    volumes:
+      - ../mcp/server/server.py:/ragflow/mcp/server/server.py:ro
     env_file: .env
     environment:
       - TZ=${TZ}
@@ -184,6 +186,8 @@ services:
     container_name: mcp-company-b
     ports:
       - "127.0.0.1:9383:9383"
+    volumes:
+      - ../mcp/server/server.py:/ragflow/mcp/server/server.py:ro
     env_file: .env
     environment:
       - TZ=${TZ}
