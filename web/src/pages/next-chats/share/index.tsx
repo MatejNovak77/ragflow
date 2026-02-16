@@ -53,6 +53,9 @@ const ChatContainer = () => {
       : useFetchNextConversationSSE;
   }, [from]);
   React.useEffect(() => {
+    document.title = 'BYZZARD';
+  }, []);
+  React.useEffect(() => {
     if (locale && i18n.language !== locale) {
       changeLanguageAsync(locale);
     }
